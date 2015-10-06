@@ -4,7 +4,7 @@
 #
 Name     : oslo.cache
 Version  : 0.7.0
-Release  : 2
+Release  : 3
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-0.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-0.7.0.tar.gz
 Summary  : Cache storage for Openstack projects.
