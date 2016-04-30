@@ -4,7 +4,7 @@
 #
 Name     : oslo.cache
 Version  : 1.6.0
-Release  : 13
+Release  : 14
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.6.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.6.0.tar.gz
 Summary  : Cache storage for Openstack projects.
