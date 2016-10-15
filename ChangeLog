@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+1.14.0
+------
+
+* Correct help text for backend option
+
+1.13.0
+------
+
+* Updated from global requirements
+
 1.12.0
 ------
 
 * Updated from global requirements
+* Fix OpenStack capitalization
 * Add Python 3.5 classifier and venv
 * Imported Translations from Zanata
 * Updated from global requirements
