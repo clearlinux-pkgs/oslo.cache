@@ -1,9 +1,20 @@
 CHANGES
 =======
 
+1.15.0
+------
+
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/newton
+* Updated from global requirements
+
 1.14.0
 ------
 
+* Add usage example to documentation
+* Fix docstring for get_memoization_decorator
 * Correct help text for backend option
 
 1.13.0
