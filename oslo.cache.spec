@@ -6,7 +6,7 @@
 #
 Name     : oslo.cache
 Version  : 1.15.0
-Release  : 24
+Release  : 25
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.15.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.15.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.15.0.tar.gz.asc
@@ -22,67 +22,11 @@ Requires: oslo.utils
 Requires: pymongo
 Requires: python-memcached
 Requires: six
-BuildRequires : Babel-python
-BuildRequires : Jinja2
-BuildRequires : MarkupSafe-python
-BuildRequires : PyYAML-python
-BuildRequires : Pygments
-BuildRequires : Sphinx-python
-BuildRequires : appdirs-python
-BuildRequires : configparser-python
-BuildRequires : debtcollector-python
-BuildRequires : docutils-python
-BuildRequires : dogpile.cache-python
-BuildRequires : dogpile.core-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : fixtures-python
-BuildRequires : flake8-python
-BuildRequires : funcsigs-python
-BuildRequires : hacking
-BuildRequires : iso8601-python
-BuildRequires : keystoneauth1-python
-BuildRequires : mccabe-python
-BuildRequires : monotonic-python
-BuildRequires : mox3-python
-BuildRequires : msgpack-python-python
-BuildRequires : netaddr
-BuildRequires : netifaces-python
-BuildRequires : os-client-config-python
-BuildRequires : oslo.config
-BuildRequires : oslo.context-python
-BuildRequires : oslo.i18n-python
-BuildRequires : oslo.log-python
-BuildRequires : oslo.serialization-python
-BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pyflakes-python
-BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-mock-python
 BuildRequires : python3-dev
-BuildRequires : pytz-python
-BuildRequires : requests-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : virtualenv
-BuildRequires : wrapt-python
 
 %description
 ==========
@@ -105,12 +49,12 @@ python components for the oslo.cache package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489030762
+export SOURCE_DATE_EPOCH=1489272274
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489030762
+export SOURCE_DATE_EPOCH=1489272274
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
