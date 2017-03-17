@@ -1,6 +1,31 @@
 CHANGES
 =======
 
+1.18.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+* Update reno for stable/ocata
+
+1.17.0
+------
+
+* Remove references to Python 3.4
+* Add Constraints support
+* Show team and repo badges on README
+
+1.16.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* TrivialFix: Remove default=None when set value in Config
+* Changed the home-page link
+
 1.15.0
 ------
 
