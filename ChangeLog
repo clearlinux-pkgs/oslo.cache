@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+1.20.0
+------
+
+* Remove log translations
+
+1.19.0
+------
+
+* Updated from global requirements
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+
 1.18.0
 ------
 
@@ -9,6 +20,7 @@ CHANGES
 * Updated from global requirements
 * pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
 * Update reno for stable/ocata
+* Switch to oslo_log
 
 1.17.0
 ------
