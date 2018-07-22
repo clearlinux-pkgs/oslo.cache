@@ -1,6 +1,103 @@
 CHANGES
 =======
 
+1.30.1
+------
+
+* Imported Translations from Zanata
+* Don't let tox\_install.sh error if there is nothing to do
+* Remove stale pip-missing-reqs tox test
+* Trivial: Update pypi url to new url
+* Avoid use of autodoc\_tree\_index\_modules
+* Switch pep8 job to python 3
+* Fix incompatible requirement in lower constraints
+
+1.30.0
+------
+
+* Change memcache\_socket\_timeout to a float
+* add lower-constraints job
+* Clean old output before new doc builds
+* Updated from global requirements
+
+1.29.0
+------
+
+* Update links in README
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+
+1.28.0
+------
+
+* Follow the new PTI for document build
+* add bandit to pep8 job
+* Updated from global requirements
+
+1.27.0
+------
+
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Add more cache backend options
+* Updated from global requirements
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Updated from global requirements
+* Updated from global requirements
+
+1.26.0
+------
+
+* Updated from global requirements
+* Update the documentation link for doc migration
+* Imported Translations from Zanata
+* Update reno for stable/pike
+* Updated from global requirements
+
+1.25.0
+------
+
+* Imported Translations from Zanata
+* update the doc URLs
+
+1.24.0
+------
+
+* turn on warning-is-error in doc build
+* switch from oslosphinx to openstackdocstheme
+* rearrange content to fit the new standard layout
+* Change locations of docs for intersphinx
+* Improve backend configuration help text
+* Add kwarg function key generator
+* Fix error in cache.configure\_cache\_region usage doc
+* Updated from global requirements
+
+1.23.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* etcd3 : get rid of ast\_literal
+
+1.22.0
+------
+
+* etcd3 driver for oslo.cache
+* Updated from global requirements
+* Updated from global requirements
+
+1.21.0
+------
+
+* Remove unused/duplicated logging import
+* Optimize the link address
+* Updated from global requirements
+* Check reStructuredText documents for common style issues
+
 1.20.0
 ------
 
@@ -10,7 +107,7 @@ CHANGES
 ------
 
 * Updated from global requirements
-* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
 
 1.18.0
 ------
@@ -18,9 +115,9 @@ CHANGES
 * Updated from global requirements
 * [Fix gate]Update test requirement
 * Updated from global requirements
-* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo\_xyz)
 * Update reno for stable/ocata
-* Switch to oslo_log
+* Switch to oslo\_log
 
 1.17.0
 ------
@@ -51,7 +148,7 @@ CHANGES
 ------
 
 * Add usage example to documentation
-* Fix docstring for get_memoization_decorator
+* Fix docstring for get\_memoization\_decorator
 * Correct help text for backend option
 
 1.13.0
@@ -156,7 +253,7 @@ CHANGES
 -----
 
 * Updated from global requirements
-* Export functions from __init__
+* Export functions from \_\_init\_\_
 
 0.8.0
 -----
@@ -164,7 +261,7 @@ CHANGES
 * Make CacheIsolatingProxy public
 * Add shields.io version/downloads links/badges into README.rst
 * add auto-generated docs for config options
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 * Updated from global requirements
 
 0.7.0
@@ -195,7 +292,7 @@ CHANGES
 0.4.0
 -----
 
-* Added NO_VALUE to core file
+* Added NO\_VALUE to core file
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
@@ -218,7 +315,7 @@ CHANGES
 
 * Usage docs
 * Document the backends
-* Remove unused _on_arguments
+* Remove unused \_on\_arguments
 * Fix up option help
 * Register backends in a cycle
 * Use "group" rather than "section"
@@ -226,9 +323,9 @@ CHANGES
 * Don't use global conf
 * Make DebugProxy private
 * make REGION public
-* Fix docstring for configure_cache_region
+* Fix docstring for configure\_cache\_region
 * Remove useless docs from private functions
-* Fix docs for get_memoization_decorator
+* Fix docs for get\_memoization\_decorator
 * Docs for configure()
 
 0.1.2
@@ -238,9 +335,9 @@ CHANGES
 * Module docs
 * Cleanup exceptions
 * handle utf8 encoding properly
-* Expose list_opts entry points for oslo-config-generator
+* Expose list\_opts entry points for oslo-config-generator
 * Remove unnecessary file
-* Add tests for _memcache_pool
+* Add tests for \_memcache\_pool
 
 0.1.1
 -----
@@ -276,11 +373,11 @@ CHANGES
 * Fixes minor whitespace issues
 * Make the default cache time more explicit in code
 * Use dict comprehensions instead of dict constructor
-* Consistently use oslo_config.cfg.CONF
+* Consistently use oslo\_config.cfg.CONF
 * Fix invalid super() usage in memcache pool
 * Use oslo.log instead of incubator
 * Move existing tests to unit
-* Change oslo.utils to oslo_utils
+* Change oslo.utils to oslo\_utils
 * Memcache connection pool excess check
 * Adds missing log hints for level E/I/W
 * Remove nonexistant param from docstring
@@ -290,13 +387,13 @@ CHANGES
 * Use functions in oslo.utils
 * Introduce pragma no cover to asbtract classes
 * Use oslo.i18n
-* Do not support toggling key_manglers in cache layer
+* Do not support toggling key\_manglers in cache layer
 * Adds hacking check for debug logging translations
 * remove a few backslash line continuations
 * Fixed some typos throughout the codebase
 * Fix cache configuration checks
 * Safer noqa handling
-* Uses explicit imports for _
+* Uses explicit imports for \_
 * Support for mongo as dogpile cache backend
 * Remove copyright from empty files
 * Remove vim header
