@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+1.31.0
+------
+
+* Imported Translations from Zanata
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+* Switch to stestr
+* Add release notes link to README
+* fix tox python3 overrides
+
 1.30.1
 ------
 
