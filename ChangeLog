@@ -1,14 +1,24 @@
 CHANGES
 =======
 
+1.31.1
+------
+
+* Config dict arguments.url must be a list
+* Clean up .gitignore references to personal tools
+* Don't quote {posargs} in tox.ini
+* Always build universal wheels
+
 1.31.0
 ------
 
 * Imported Translations from Zanata
+* Drop expired connections before retrieving from the queue
 * add lib-forward-testing-python3 test job
 * add python 3.6 unit test job
 * import zuul job settings from project-config
 * Update reno for stable/rocky
+* tox: Fix typo
 * Switch to stestr
 * Add release notes link to README
 * fix tox python3 overrides

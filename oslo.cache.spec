@@ -5,21 +5,19 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.cache
-Version  : 1.31.0
-Release  : 31
-URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.0.tar.gz.asc
+Version  : 1.31.1
+Release  : 32
+URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.1.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.1.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.1.tar.gz.asc
 Summary  : Cache storage for OpenStack projects.
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.cache-python3
-Requires: oslo.cache-license
-Requires: oslo.cache-python
+Requires: oslo.cache-license = %{version}-%{release}
+Requires: oslo.cache-python = %{version}-%{release}
+Requires: oslo.cache-python3 = %{version}-%{release}
 Requires: Sphinx
-Requires: bandit
 Requires: dogpile.cache
-Requires: hacking
 Requires: openstackdocstheme
 Requires: oslo.config
 Requires: oslo.i18n
@@ -32,7 +30,6 @@ Requires: python-mock
 Requires: reno
 Requires: six
 Requires: sphinxcontrib-apidoc
-Requires: stestr
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
@@ -67,20 +64,20 @@ python3 components for the oslo.cache package.
 
 
 %prep
-%setup -q -n oslo.cache-1.31.0
+%setup -q -n oslo.cache-1.31.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538575405
+export SOURCE_DATE_EPOCH=1540463266
 python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.cache
-cp LICENSE %{buildroot}/usr/share/doc/oslo.cache/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.cache
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.cache/LICENSE
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -91,7 +88,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/doc/oslo.cache/LICENSE
+/usr/share/package-licenses/oslo.cache/LICENSE
 
 %files python
 %defattr(-,root,root,-)
