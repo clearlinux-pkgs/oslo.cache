@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.31.2
+------
+
+* Update mailinglist from dev to discuss
+* Only split url arg with memcache backend
+
 1.31.1
 ------
 
