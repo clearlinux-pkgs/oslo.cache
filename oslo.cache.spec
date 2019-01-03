@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.cache
-Version  : 1.31.2
-Release  : 35
-URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.2.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.2.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.31.2.tar.gz.asc
+Version  : 1.32.0
+Release  : 36
+URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz.asc
 Summary  : Cache storage for OpenStack projects.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -34,8 +34,11 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: https://governance.openstack.org/tc/badges/oslo.cache.svg
+:target: https://governance.openstack.org/tc/reference/tags/index.html
 
 %package license
 Summary: license components for the oslo.cache package.
@@ -64,14 +67,14 @@ python3 components for the oslo.cache package.
 
 
 %prep
-%setup -q -n oslo.cache-1.31.2
+%setup -q -n oslo.cache-1.32.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1544544049
+export SOURCE_DATE_EPOCH=1546552168
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

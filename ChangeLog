@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.32.0
+------
+
+* Update the requirements to match global-requirements for dogpile.cache
+* Use template for lower-constraints
+
 1.31.2
 ------
 
