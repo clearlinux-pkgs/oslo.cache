@@ -6,7 +6,7 @@
 #
 Name     : oslo.cache
 Version  : 1.32.0
-Release  : 36
+Release  : 37
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz.asc
@@ -32,6 +32,7 @@ Requires: six
 Requires: sphinxcontrib-apidoc
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
+Patch1: deps.patch
 
 %description
 ========================
@@ -68,13 +69,14 @@ python3 components for the oslo.cache package.
 
 %prep
 %setup -q -n oslo.cache-1.32.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546552168
+export SOURCE_DATE_EPOCH=1546631929
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
