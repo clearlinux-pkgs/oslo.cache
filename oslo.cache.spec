@@ -6,7 +6,7 @@
 #
 Name     : oslo.cache
 Version  : 1.32.0
-Release  : 37
+Release  : 38
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz.asc
@@ -16,20 +16,14 @@ License  : Apache-2.0
 Requires: oslo.cache-license = %{version}-%{release}
 Requires: oslo.cache-python = %{version}-%{release}
 Requires: oslo.cache-python3 = %{version}-%{release}
-Requires: Sphinx
 Requires: dogpile.cache
-Requires: openstackdocstheme
 Requires: oslo.config
 Requires: oslo.i18n
 Requires: oslo.log
 Requires: oslo.utils
-Requires: oslotest
 Requires: pymongo
 Requires: python-memcached
-Requires: python-mock
-Requires: reno
 Requires: six
-Requires: sphinxcontrib-apidoc
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 Patch1: deps.patch
@@ -76,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546631929
+export SOURCE_DATE_EPOCH=1551030220
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
