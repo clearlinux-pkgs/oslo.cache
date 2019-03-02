@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.cache
-Version  : 1.32.0
-Release  : 38
-URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.32.0.tar.gz.asc
+Version  : 1.33.2
+Release  : 39
+URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.33.2.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.33.2.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.33.2.tar.gz.asc
 Summary  : Cache storage for OpenStack projects.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -26,7 +26,6 @@ Requires: python-memcached
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-Patch1: deps.patch
 
 %description
 ========================
@@ -62,15 +61,14 @@ python3 components for the oslo.cache package.
 
 
 %prep
-%setup -q -n oslo.cache-1.32.0
-%patch1 -p1
+%setup -q -n oslo.cache-1.33.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551030220
+export SOURCE_DATE_EPOCH=1551543756
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+1.33.2
+------
+
+* Fix memcache pool client in monkey-patched environments
+
+1.33.1
+------
+
+* fix dogpile.cache issue due to the new usage of decorate in the lib
+
+1.33.0
+------
+
+* uncap dogpile
+
 1.32.0
 ------
 
