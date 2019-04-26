@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.34.0
+------
+
+* OpenDev Migration Patch
+* Pass \`flush\_on\_reconnect\` to memcache pooled backend
+* Update master for stable/stein
+* Update hacking version
+* add python 3.7 unit test job
+
 1.33.2
 ------
 
@@ -10,6 +19,7 @@ CHANGES
 ------
 
 * fix dogpile.cache issue due to the new usage of decorate in the lib
+* Remove stale comment in \_memcache\_pool
 
 1.33.0
 ------
