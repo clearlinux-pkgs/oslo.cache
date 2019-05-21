@@ -1,10 +1,20 @@
 CHANGES
 =======
 
+1.35.0
+------
+
+* Cap Bandit below 1.6.0 and update Sphinx requirement
+* Replace git.openstack.org URLs with opendev.org URLs
+* tox: Use the new hotness for constraints
+* Avoid tox\_install.sh for constraints support
+* Fix lower-constraints
+
 1.34.0
 ------
 
 * OpenDev Migration Patch
+* Dropping the py35 testing
 * Pass \`flush\_on\_reconnect\` to memcache pooled backend
 * Update master for stable/stein
 * Update hacking version
