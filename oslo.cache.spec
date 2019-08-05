@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : oslo.cache
-Version  : 1.36.0
-Release  : 44
-URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.36.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.36.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.36.0.tar.gz.asc
+Version  : 1.37.0
+Release  : 45
+URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.37.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.37.0.tar.gz
+Source1 : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.37.0.tar.gz.asc
 Summary  : Cache storage for OpenStack projects.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -69,14 +69,14 @@ python3 components for the oslo.cache package.
 
 
 %prep
-%setup -q -n oslo.cache-1.36.0
+%setup -q -n oslo.cache-1.37.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561039460
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1565013728
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
