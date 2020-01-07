@@ -6,7 +6,7 @@
 #
 Name     : oslo.cache
 Version  : 1.38.1
-Release  : 48
+Release  : 49
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.38.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.38.1.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.cache/oslo.cache-1.38.1.tar.gz.asc
