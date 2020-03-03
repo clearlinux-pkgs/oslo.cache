@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Switch from python-memcached to pymemcache
+* trivial: Cleanup tox.ini
+* remove outdated header
+
 2.0.0
 -----
 
