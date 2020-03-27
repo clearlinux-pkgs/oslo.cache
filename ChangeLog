@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.2.0
+-----
+
+* Add memcache\_pool backend job
+* Revert "Switch from python-memcached to pymemcache."
+* Remove dogpile kwarg test
+* Fix python2 syntaxe in doc
+* Fix pymemcache release note python package name
+
 2.1.0
 -----
 

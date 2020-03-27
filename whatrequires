@@ -3,4 +3,3 @@ heat
 keystone
 keystonemiddleware
 neutron
-nova

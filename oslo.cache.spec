@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.cache
-Version  : 2.1.0
-Release  : 52
-URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.1.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.1.0.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.1.0.tar.gz.asc
+Version  : 2.2.0
+Release  : 53
+URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.2.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.2.0.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.2.0.tar.gz.asc
 Summary  : Cache storage for OpenStack projects.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -21,8 +21,8 @@ Requires: oslo.config
 Requires: oslo.i18n
 Requires: oslo.log
 Requires: oslo.utils
-Requires: pymemcache
 Requires: pymongo
+Requires: python-memcached
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : dogpile.cache
@@ -31,45 +31,16 @@ BuildRequires : oslo.i18n
 BuildRequires : oslo.log
 BuildRequires : oslo.utils
 BuildRequires : pbr
-BuildRequires : pymemcache
 BuildRequires : pymongo
+BuildRequires : python-memcached
 BuildRequires : six
 
 %description
 ========================
 Team and repository tags
 ========================
-
 .. image:: https://governance.openstack.org/tc/badges/oslo.cache.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
-
-.. Change things from this point on
-
-==========
-oslo.cache
-==========
-
-.. image:: https://img.shields.io/pypi/v/oslo.cache.svg
-    :target: https://pypi.org/project/oslo.cache/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/oslo.cache.svg
-    :target: https://pypi.org/project/oslo.cache/
-    :alt: Downloads
-
-`oslo.cache` aims to provide a generic caching mechanism for OpenStack projects
-by wrapping the `dogpile.cache
-<https://dogpilecache.readthedocs.org/en/latest/>`_ library. The dogpile.cache
-library provides support memoization, key value storage and interfaces to common
-caching backends such as `Memcached <https://www.memcached.org/>`_.
-
-
-
-* Free software: Apache license
-* Documentation: https://docs.openstack.org/oslo.cache/latest/
-* Source: https://opendev.org/openstack/oslo.cache/
-* Bugs: https://bugs.launchpad.net/oslo.cache
-* Release notes: https://docs.openstack.org/releasenotes/oslo.cache/
+:target: https://governance.openstack.org/tc/reference/tags/index.html
 
 %package license
 Summary: license components for the oslo.cache package.
@@ -93,21 +64,27 @@ Summary: python3 components for the oslo.cache package.
 Group: Default
 Requires: python3-core
 Provides: pypi(oslo.cache)
+Requires: pypi(dogpile.cache)
+Requires: pypi(oslo.config)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.log)
+Requires: pypi(oslo.utils)
+Requires: pypi(six)
 
 %description python3
 python3 components for the oslo.cache package.
 
 
 %prep
-%setup -q -n oslo.cache-2.1.0
-cd %{_builddir}/oslo.cache-2.1.0
+%setup -q -n oslo.cache-2.2.0
+cd %{_builddir}/oslo.cache-2.2.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583248864
+export SOURCE_DATE_EPOCH=1585267330
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -124,7 +101,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.cache
-cp %{_builddir}/oslo.cache-2.1.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.cache/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/oslo.cache-2.2.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.cache/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
