@@ -1,6 +1,28 @@
 CHANGES
 =======
 
+2.4.1
+-----
+
+* Stop to use the \_\_future\_\_ module
+
+2.4.0
+-----
+
+* Refactoring functional tests based on standard usages
+* Switch to newer openstackdocstheme and reno versions
+* Remove the unused coding style modules
+* Fix pep8 failure
+* Adding functional tests
+* Small cleanups in tox.ini
+* Remove unneeded babel.cfg etc
+* Remove six
+* Switch to Victoria tests
+* [doc] tell to prefix ipv6 hosts with inet6
+* Add release notes links to doc index
+* Imported Translations from Zanata
+* Update master for stable/ussuri
+
 2.3.0
 -----
 
