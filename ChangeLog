@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+2.5.0
+-----
+
+* Update lower-constraints versions
+* Add TLS context creation from config
+* Add TLS options to oslo.cache
+* Fix pygments style
+
 2.4.1
 -----
 
