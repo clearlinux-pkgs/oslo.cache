@@ -1,6 +1,19 @@
 CHANGES
 =======
 
+2.6.0
+-----
+
+* Add python-binary-memcached to support SASL
+* Drop hard choice on py38 for functional tests
+* Bump dogpile.cache's version for Memcached TLS support
+* Add pre-commit to pep8 gate
+* Apply fixes for pre-commit compliance in all code
+* Uses commit hash instead of version tags in pre-commit
+* Removes pre-commit hooks from Lucas-C
+* Bump bandit version
+* Introducing usage of pre-commit
+
 2.5.0
 -----
 
@@ -26,6 +39,7 @@ CHANGES
 * Remove unneeded babel.cfg etc
 * Remove six
 * Switch to Victoria tests
+* Align contributing doc with oslo's policy
 * [doc] tell to prefix ipv6 hosts with inet6
 * Add release notes links to doc index
 * Imported Translations from Zanata
