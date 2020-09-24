@@ -6,7 +6,7 @@
 #
 Name     : oslo.cache
 Version  : 2.6.1
-Release  : 58
+Release  : 59
 URL      : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.6.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.6.1.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.cache/oslo.cache-2.6.1.tar.gz.asc
